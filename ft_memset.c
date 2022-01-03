@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 12:34:54 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 15:22:51 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 13:33:44 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memset(void *src, int c, size_t len)
 	size_t			i;
 	char			*str;
 
-	if (src == NULL)
-		return (NULL);
 	i = 0;
 	str = (char *)src;
 	l = (unsigned char) c;
@@ -31,6 +29,7 @@ void	*ft_memset(void *src, int c, size_t len)
 	return (src);
 }
 
+/*
 #include <string.h>
 #include <stdio.h>
 int main()
@@ -40,3 +39,4 @@ int main()
 	printf("%s\n", ft_memset(str1, 'a', 5));
 	printf("%s\n", memset(str2, 'a', 5));
 }
+*/

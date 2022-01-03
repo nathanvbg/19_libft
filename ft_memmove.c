@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 15:23:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 14:43:08 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/03 14:19:59 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/03 14:56:49 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*str;
+	char	*dst2;
 	char	*src2;
 	size_t	i;
 
 	if (src == NULL && dst == NULL)
 		return (NULL);
-	str = (char *)dst;
+	dst2 = (char *)dst;
 	src2 = (char *)src;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		str[i] = (char)src2[i];
+		dst2[i] = (char)src2[i];
 		i++;
 	}
-	return (str);
+	return (dst);
 }
 /*
 #include <stdio.h>
@@ -39,7 +39,7 @@ int main()
 	char dest2[50] = "aaaa";
 	char src[40] = "lol";
 	char src2[40] = "lol";
-	printf("%s\n", ft_memcpy(dest, src, 1));
-	printf("%s\n", memcpy(dest2, src2, 1));
+	printf("%s\n", ft_memmove(dest, src, 2));
+	printf("%s\n", memmove(dest2, src2, 2));
 }
 */

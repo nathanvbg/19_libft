@@ -6,21 +6,11 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:19:57 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 16:27:33 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 15:33:13 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-static size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,27 +18,29 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 	char	*str;
 
+	if (s[0] == '\0')
+		return (NULL);
 	x = (char) c;
 	str = (char *)s;
 	i = ft_strlen(str);
-	if (c == '\0')
-		return (&str[i]);
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (s[i] == c)
 			return (&str[i]);
 		i--;
 	}
 	return (NULL);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 int	main()
 {
-	char s1[] = "wqarnququq";
-	char s2[] = "wqarnququq";
+	char s1[] = "";
+	char s2[] = "";
 
 	printf("%s\n", ft_strrchr(s1, 'w'));
 	printf("%s\n", strrchr(s2, 'w'));
 }
+*/

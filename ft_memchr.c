@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:14:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 17:41:58 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 12:21:14 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 int	main()
@@ -54,3 +55,4 @@ int	main()
 	printf("%s\n", ft_memchr(s1, 'q', 6));
 	printf("%s\n\n", memchr(s2, 'q', 6));
 }
+*/

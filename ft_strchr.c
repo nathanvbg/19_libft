@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:08:26 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 16:19:10 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 12:23:03 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 int	main()
@@ -42,3 +43,4 @@ int	main()
 	printf("%s\n", ft_strchr(s1, 'q'));
 	printf("%s\n", strchr(s2, 'q'));
 }
+*/

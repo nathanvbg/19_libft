@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:28:00 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 17:13:58 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 12:23:22 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
+/*
 #include <string.h>
 #include <stdio.h>
 int main()
@@ -52,3 +53,4 @@ int main()
 	printf("%d\n", ft_strncmp(s1, s2 , 6));
 	printf("%d\n", strncmp(s11, s22 , 6));
 }
+*/

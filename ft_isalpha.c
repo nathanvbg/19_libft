@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 11:49:20 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/07 12:02:54 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/03 12:20:34 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
+/*
 #include <stdio.h>
 #include <ctype.h>
 int main()
@@ -28,3 +29,4 @@ int main()
 	printf("%d\n", isalpha(c));
 	return (0);
 }
+*/
