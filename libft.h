@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:28:30 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 16:02:06 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/03 17:22:31 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
-char	*strdup(const char *s1);
+char	*ft_strdup(const char *s1);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
 
 #endif
