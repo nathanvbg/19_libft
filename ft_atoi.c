@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 12:14:32 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 15:42:17 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/04 13:49:52 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * neg);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -46,3 +46,4 @@ int main()
 	printf("%d\n", atoi(str));
 	printf("%d\n", ft_atoi(str));
 }
+*/

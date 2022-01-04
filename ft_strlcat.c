@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:11:58 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/09 16:40:01 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/04 13:52:21 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	i = 0;
 	len = ft_strlen(dst);
 	len_final = ft_strlen(dst) + ft_strlen(src);
-	if( n == 0)
+	if (n == 0)
 		return (ft_strlen(src));
 	while (src[i] && (len + i) < (n - 1))
 	{
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	dst[len + i] = '\0';
 	if (n < ft_strlen(dst))
 		return (ft_strlen(src) + n);
-	return(len_final);
+	return (len_final);
 }
 
 /*

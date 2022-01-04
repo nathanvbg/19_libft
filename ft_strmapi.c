@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 15:43:44 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 16:47:14 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/04 09:57:53 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/04 13:52:48 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	char	*s1;
-	char	*dst;
+	char			*dest;
+	unsigned int	i;
 
 	i = 0;
-	s1 = (char *)str;
-	dst = malloc(ft_strlen(s1) + 1 * sizeof(char));
-	if (!dst)
+	if (!s || !(*f))
 		return (NULL);
-	while (s1[i])
+	dest = malloc(ft_strlen(s) + 1 * sizeof(char));
+	if (!dest)
+		return (NULL);
+	while (s[i])
 	{
-		dst[i] = s1[i];
+		dest[i] = (*f)(i, s[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	dest[i] = '\0';
+	return (dest);
 }

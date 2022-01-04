@@ -1,33 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 15:43:44 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 16:47:14 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/04 10:31:34 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/04 13:51:41 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*dest;
 	int		i;
-	char	*s1;
-	char	*dst;
+	int		j;
 
 	i = 0;
-	s1 = (char *)str;
-	dst = malloc(ft_strlen(s1) + 1 * sizeof(char));
-	if (!dst)
-		return (NULL);
+	j = 0;
+	dest = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	while (s1[i])
 	{
-		dst[i] = s1[i];
+		dest[i] = s1[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	while (s2[i])
+	{
+		dest[i] = s2[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
+
+/*
+int	main(int ac, char **av)
+{
+	ac = 0;
+	printf("%s\n", ft_strjoin(av[1], av[2]));
+	return (0);
+}
+*/

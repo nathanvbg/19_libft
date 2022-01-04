@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:50:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2021/12/09 12:13:35 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/04 16:26:15 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	char	*needle;
 
 	i = 0;
-	j = 0;
 	hay = (char *)str;
 	needle = (char *)to_find;
 	if (needle[0] == '\0')

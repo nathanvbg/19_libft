@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 17:14:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 12:21:14 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/04 13:50:18 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	x;
-	size_t		i;
-	char		*str;
+	size_t			i;
+	char			*str;
 
 	x = (unsigned char) c;
 	str = (char *)s;

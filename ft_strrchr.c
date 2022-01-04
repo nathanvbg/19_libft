@@ -6,32 +6,33 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 16:19:57 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 15:33:13 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/04 16:23:39 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	char	x;
-	size_t	i;
-	char	*str;
+	int		i;
+	char	*s;
 
-	if (s[0] == '\0')
-		return (NULL);
-	x = (char) c;
-	str = (char *)s;
-	i = ft_strlen(str);
+	s = (char *)str;
+	i = 0;
+	while (*s)
+	{
+		i++;
+		s++;
+	}
 	while (i >= 0)
 	{
-		if (s[i] == c)
-			return (&str[i]);
+		if (*s == c)
+			return (s);
 		i--;
+		s--;
 	}
 	return (NULL);
 }
-
 /*
 #include <stdio.h>
 #include <string.h>
