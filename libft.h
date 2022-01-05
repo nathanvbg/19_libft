@@ -6,7 +6,7 @@
 /*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 15:28:30 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/05 14:03:53 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 14:47:45 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
-void	*calloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
