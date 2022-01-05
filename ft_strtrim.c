@@ -6,15 +6,15 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:46:59 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/05 13:39:18 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 17:31:01 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_charset(char c, char *set)
+static int	ft_is_charset(char c, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -26,46 +26,40 @@ static int	is_charset(char c, char *set)
 	return (0);
 }
 
-static size_t	def_nb(char *str, char *set)
-{
-	size_t	start;
-	size_t	end;
-	size_t	nb;
-
-	start = 0;
-	end = ft_strlen(str);
-	nb = 0;
-	while (is_charset(str[start], set))
-		start++;
-	while (is_charset(str[end - 1], set))
-		end--;
-	nb = ft_strlen(str) - (start + (ft_strlen(str) - end));
-	if (start == ft_strlen(str))
-		return (0);
-	return (nb);
-}
-
-char	*ft_strtrim(char const *s1, char const *trim)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	start;
+	size_t	end;
 	char	*dest;
-	char	*set;
-	char	*str;
 
-	set = (char *)trim;
-	str = (char *)s1;
 	i = 0;
 	start = 0;
-	if (s1 == NULL)
+	end = ft_strlen(s1);
+	if (!s1)
 		return (NULL);
-	while (is_charset(str[start], set))
+	while (start < ft_strlen(s1) && ft_is_charset(s1[start], set))
 		start++;
-	dest = malloc(sizeof(char) * def_nb(str, set) + 1);
+	while (end > start && ft_is_charset(s1[end - 1], set))
+		end--;
+	dest = malloc((end - start + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
-	while (i < def_nb(str, set))
-		dest[i++] = str[start++];
+	while (start < end)
+		dest[i++] = s1[start++];
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include <stdio.h>
+int main()
+{
+	char *str;
+	char *set;
+
+	str = "abec";
+	set = "abc";
+	printf("%s\n", ft_strtrim(str, set));
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 13:24:35 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/05 13:29:01 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 14:57:25 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	dst[i] = '\0';
 	return (len);
 }
-
-/*
-int main()
-{
-	char dest[100] = "hello mon ami";
-	char str[100] = "ceci est";
-	char dest1[100] = "hello mon ami";
-	char str1[100] = "ceci est";
-	printf("f= %zu\n", ft_strlcpy(dest, str, 20));
-	printf("o= %lu\n\n", strlcpy(dest1, str1, 20));
-	printf("f= %s\n", dest);
-	printf("o= %s\n", dest1);
-}
-*/
