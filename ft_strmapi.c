@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 09:57:53 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 13:52:48 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:30:51 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		dest[i] = (*f)(i, s[i]);
+		dest[i] = f(i, s[i]);
 		i++;
 	}
 	dest[i] = '\0';

@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:08:16 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 14:47:19 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:09:22 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,15 +89,3 @@ char	**ft_split(char const *str, char c)
 	tab[j] = (NULL);
 	return (tab);
 }
-/*
-int	main()
-{
-	char *str;
-	char **tab;
-
-	str = "split  ||this|for|me|||||!|";
-	tab = ft_split(str, '|');
-	print_tab(tab);
-	return (0);
-}
-*/

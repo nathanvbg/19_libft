@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 16:08:26 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 12:23:03 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 13:10:32 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 13:11:14 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	x;
 	size_t	i;
 	char	*str;
 
-	x = (char) c;
 	str = (char *)s;
 	i = 0;
 	while (str[i])
@@ -31,16 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&str[i]);
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char s1[] = "arnquu";
-	char s2[] = "arnquu";
-
-	printf("%s\n", ft_strchr(s1, 'q'));
-	printf("%s\n", strchr(s2, 'q'));
-}
-*/

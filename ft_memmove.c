@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 14:19:59 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 16:22:39 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 08:49:30 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char dest[60] = "123456";
-	char dest2[60] = "123456";
-	char src[40] = "lolilol";
-	char src2[40] = "lolilol";
-	printf("%s\n", ft_memmove(dest, src, 4));
-	printf("%s\n", memmove(dest2, src2, 4));
-}
-*/

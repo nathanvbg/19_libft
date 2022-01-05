@@ -6,13 +6,13 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:46:59 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 13:47:43 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:39:18 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_charset(char c, char *set)
+static int	is_charset(char c, char *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	is_charset(char c, char *set)
 	return (0);
 }
 
-size_t	def_nb(char *str, char *set)
+static size_t	def_nb(char *str, char *set)
 {
 	size_t	start;
 	size_t	end;
@@ -69,11 +69,3 @@ char	*ft_strtrim(char const *s1, char const *trim)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-int main()
-{
-	printf("%s\n", ft_strtrim("", " \t\n"));
-	return (0);
-}
-*/

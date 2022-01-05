@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 11:49:20 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 12:20:34 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 08:27:26 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 08:27:55 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -16,17 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <ctype.h>
-int main()
-{
-	char c;
-
-	c = 'W';
-	printf("%d\n", ft_isalpha(c));
-	printf("%d\n", isalpha(c));
-	return (0);
-}
-*/

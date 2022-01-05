@@ -3,40 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 12:34:54 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 13:33:44 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 08:50:01 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 08:50:57 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *src, int c, size_t len)
 {
-	unsigned char	l;
 	size_t			i;
 	char			*str;
 
 	i = 0;
 	str = (char *)src;
-	l = (unsigned char) c;
 	while (i < len)
 	{
-		str[i] = l;
+		str[i] = c;
 		i++;
 	}
 	return (src);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char str1[50] = "helloww copain";
-	char str2[50] = "helloww copain";
-	printf("%s\n", ft_memset(str1, 'a', 5));
-	printf("%s\n", memset(str2, 'a', 5));
-}
-*/

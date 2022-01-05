@@ -3,56 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 17:14:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/04 13:50:18 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 08:34:47 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 08:43:07 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	x;
-	size_t			i;
-	char			*str;
+	size_t	i;
 
-	x = (unsigned char) c;
-	str = (char *)s;
 	i = 0;
-	while (str[i] && i < n)
+	while (i < n)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (((unsigned char *) s)[i] == (unsigned char)c)
+			return ((unsigned char *)&s[i]);
 		i++;
 	}
-	if (c == '\0')
-		return (&str[i]);
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char s1[] = "arqnq";
-	char s2[] = "arqnq";
-
-	printf("%s\n", ft_memchr(s1, 'q', 0));
-	printf("%s\n\n", memchr(s2, 'q', 0));
-	printf("%s\n", ft_memchr(s1, 'q', 1));
-	printf("%s\n\n", memchr(s2, 'q', 1));
-	printf("%s\n", ft_memchr(s1, 'q', 2));
-	printf("%s\n\n", memchr(s2, 'q', 2));
-	printf("%s\n", ft_memchr(s1, 'q', 3));
-	printf("%s\n\n", memchr(s2, 'q', 3));
-	printf("%s\n", ft_memchr(s1, 'q', 4));
-	printf("%s\n\n", memchr(s2, 'q', 4));
-	printf("%s\n", ft_memchr(s1, 'q', 5));
-	printf("%s\n\n", memchr(s2, 'q', 5));
-	printf("%s\n", ft_memchr(s1, 'q', 6));
-	printf("%s\n\n", memchr(s2, 'q', 6));
-}
-*/

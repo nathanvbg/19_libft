@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 10:31:34 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 13:51:41 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:13:25 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	ac = 0;
-	printf("%s\n", ft_strjoin(av[1], av[2]));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 09:47:45 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 13:51:25 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:07:02 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,6 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 	{
 		ft_putnbr_fd(nb / 10, fd);
-		ft_putchar_fd((nb % 10) + 48, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
 }
-
-/*
-int	main()
-{
-	ft_putnbr_fd(-1234, 1);
-}
-*/

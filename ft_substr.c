@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 08:20:48 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/04 09:17:30 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 13:48:09 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-int	main()
-{
-	char	*str;
-
-	str = "0123";
-	printf("%s\n", ft_substr(str, 3, 3));
-	return (0);
-}
-*/

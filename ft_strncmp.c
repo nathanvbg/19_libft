@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 16:28:00 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/04 14:57:00 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 13:33:31 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 13:33:35 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -27,30 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char s1[] = "sal";
-	char s11[] = "sal";
-	char s2[] = "salut";
-	char s22[] = "salut";
-
-	printf("%d\n", ft_strncmp(s1, s2 , 0));
-	printf("%d\n", strncmp(s11, s22 , 0));
-	printf("%d\n", ft_strncmp(s1, s2 , 1));
-	printf("%d\n", strncmp(s11, s22 , 1));
-	printf("%d\n", ft_strncmp(s1, s2 , 2));
-	printf("%d\n", strncmp(s11, s22 , 2));
-	printf("%d\n", ft_strncmp(s1, s2 , 3));
-	printf("%d\n", strncmp(s11, s22 , 3));
-	printf("%d\n", ft_strncmp(s1, s2 , 4));
-	printf("%d\n", strncmp(s11, s22 , 4));
-	printf("%d\n", ft_strncmp(s1, s2 , 5));
-	printf("%d\n", strncmp(s11, s22 , 5));
-	printf("%d\n", ft_strncmp(s1, s2 , 6));
-	printf("%d\n", strncmp(s11, s22 , 6));
-}
-*/

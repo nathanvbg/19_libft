@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 15:23:23 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 14:43:08 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 08:45:28 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 08:47:37 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -25,21 +25,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		str[i] = (char)src2[i];
+		str[i] = src2[i];
 		i++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char dest[50] = "aaaa";
-	char dest2[50] = "aaaa";
-	char src[40] = "lol";
-	char src2[40] = "lol";
-	printf("%s\n", ft_memcpy(dest, src, 1));
-	printf("%s\n", memcpy(dest2, src2, 1));
-}
-*/

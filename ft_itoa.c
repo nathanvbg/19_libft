@@ -6,13 +6,13 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 17:00:55 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/03 17:48:42 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/05 08:33:54 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_size_nb(long int nb)
+static int	ft_size_nb(long int nb)
 {
 	int	i;
 
@@ -58,10 +58,3 @@ char	*ft_itoa(int nb)
 		str[0] = '-';
 	return (str);
 }
-/*
-int	main()
-{
-	printf("%s\n", ft_itoa(-50001425));
-	return (0);
-}
-*/

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/07 15:50:43 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/03 13:31:29 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 13:49:38 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 13:49:51 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -16,13 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*
-#include <stdio.h>
-#include <ctype.h>
-int main()
-{
-	printf("%c\n", ft_toupper('z'));
-	printf("%c\n", toupper('z'));
-}
-*/

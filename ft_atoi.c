@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nverbrug <nverbrug@student.s19.be>         +#+  +:+       +#+        */
+/*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 12:14:32 by nverbrug          #+#    #+#             */
-/*   Updated: 2022/01/04 13:49:52 by naverbru         ###   ########.fr       */
+/*   Created: 2022/01/05 08:21:42 by naverbru          #+#    #+#             */
+/*   Updated: 2022/01/05 08:22:03 by naverbru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -36,14 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * neg);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char	*str;
-
-	str = "     -165656565654898455448843545488431165645632g251";
-	printf("%d\n", atoi(str));
-	printf("%d\n", ft_atoi(str));
-}
-*/
