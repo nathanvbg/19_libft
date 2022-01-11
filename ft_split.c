@@ -6,11 +6,12 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:08:16 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/05 13:09:22 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/11 12:21:09 by nverbrug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_count_line(const char *str, char c)
 {
@@ -30,6 +31,7 @@ static int	ft_count_line(const char *str, char c)
 				i++;
 		}
 	}
+	printf("%d\n", line);
 	return (line);
 }
 
@@ -72,7 +74,7 @@ char	**ft_split(char const *str, char c)
 	j = 0;
 	if (str == NULL)
 		return (NULL);
-	tab = malloc((ft_count_line(str, c) + 2) * sizeof(char *));
+	tab = malloc((ft_count_line(str, c) + 1) * sizeof(char *));
 	if (tab == NULL)
 		return (NULL);
 	while (str[i])
@@ -89,3 +91,27 @@ char	**ft_split(char const *str, char c)
 	tab[j] = (NULL);
 	return (tab);
 }
+/*
+void	ft_print(char **tab)
+{
+	int i;
+
+	i = 0;
+	while (tab[i])
+	{
+		printf("%s\n", tab[i]);
+		i++;
+	}
+}
+
+int	main()
+{
+	char *str;
+	char c;
+
+	str = "hello";
+	c = 'l';
+	ft_print(ft_split(str, c));
+	return (0);
+}
+*/

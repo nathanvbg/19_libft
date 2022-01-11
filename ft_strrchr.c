@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 13:36:23 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/05 13:38:30 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/11 11:59:23 by nverbrug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
 	char	*s;
+	char	x;
 
+	x = (char) c;
 	s = (char *)str;
 	i = 0;
 	while (*s)
@@ -26,7 +28,7 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	while (i >= 0)
 	{
-		if (*s == c)
+		if (*s == x)
 			return (s);
 		i--;
 		s--;
