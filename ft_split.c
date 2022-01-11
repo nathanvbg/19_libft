@@ -6,12 +6,11 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 16:08:16 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/11 12:21:09 by nverbrug         ###   ########.fr       */
+/*   Updated: 2022/01/11 12:53:15 by nverbrug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_count_line(const char *str, char c)
 {
@@ -31,24 +30,21 @@ static int	ft_count_line(const char *str, char c)
 				i++;
 		}
 	}
-	printf("%d\n", line);
 	return (line);
 }
 
-static void	ft_free(char **tab)
+static char	**ft_free(char **tab, int j)
 {
-	int	i;
-
-	i = 0;
-	while (tab[i])
+	while (j >= 0)
 	{
-		free(tab[i]);
-		i++;
+		free(tab[j]);
+		j--;
 	}
 	free(tab);
+	return (tab);
 }
 
-static char	*ft_strsdup(char const *str, char c, char **tab)
+static char	*ft_strsdup(char const *str, char c)
 {
 	size_t			len;
 	unsigned int	start;
@@ -59,8 +55,6 @@ static char	*ft_strsdup(char const *str, char c, char **tab)
 	while (str[len] && str[len] != c)
 		len++;
 	dest = ft_substr(str, start, len);
-	if (dest == NULL)
-		ft_free(tab);
 	return (dest);
 }
 
@@ -83,7 +77,9 @@ char	**ft_split(char const *str, char c)
 			i++;
 		if (str[i] != c && str[i])
 		{
-			tab[j++] = ft_strsdup(&str[i], c, tab);
+			tab[j++] = ft_strsdup(&str[i], c);
+			if (tab[j - 1] == NULL)
+				return (ft_free(tab, j - 1));
 			while (str[i] != c && str[i])
 				i++;
 		}
@@ -91,27 +87,3 @@ char	**ft_split(char const *str, char c)
 	tab[j] = (NULL);
 	return (tab);
 }
-/*
-void	ft_print(char **tab)
-{
-	int i;
-
-	i = 0;
-	while (tab[i])
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-}
-
-int	main()
-{
-	char *str;
-	char c;
-
-	str = "hello";
-	c = 'l';
-	ft_print(ft_split(str, c));
-	return (0);
-}
-*/

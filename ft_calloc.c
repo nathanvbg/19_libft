@@ -6,7 +6,7 @@
 /*   By: naverbru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 11:23:53 by naverbru          #+#    #+#             */
-/*   Updated: 2022/01/05 14:26:05 by naverbru         ###   ########.fr       */
+/*   Updated: 2022/01/11 12:57:32 by nverbrug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count == 0 && size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (0);
